@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Joseba Egia">
+    
+    <title>
+        
+            Unraid, El Sistema Operativo Para Servidores Domésticos |
+        
+        Yayitazale&#39;s blog
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hexojs/site/master/source/icon/favicon-96x96.png">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.yayitazale.duckdns.org","root":"/","language":"en","path":"search.xml"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/cara.jpg","favicon":"https://raw.githubusercontent.com/hexojs/site/master/source/icon/favicon-96x96.png","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Lorem ipsum dolor sit amet."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":false},"lazyload":{"enable":true},"version":"3.4.0"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            <a class="logo-title" href="/">
+                Yayitazale&#39;s blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">ARCHIVES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Unraid, El Sistema Operativo Para Servidores Domésticos</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/cara.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Joseba Egia</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2021-01-31 20:00:00
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/unraid/">selfhosted</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/unraid/unraid/">unraid</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>14 Mins</span>
+        </span>
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>En este primer post del blog quiero empezar hablando del sistema operativo que tengo instalado en mi servidor, ya que es la base sobre la que voy a trabajar muchos de los siguientes proyectos que vaya subiendo. </p>
+<p>Llevo aproximadamente dos años con este sistema y no puedo estar más contento: es un sistema robusto, con una empresa seria detrás y hay una comunidad muy amplia y activa. La calidad/precio de lo que ofrece es inigualable al menos desde mi punto de vista, ya que tiene todas las bondades de basarse en el software libre (linux) y los aportes de la comunidad, pero con el desarrollo y mantenimiento principal a manos de la empresa <a class="link"   target="_blank" rel="noopener" href="https://unraid.net/about" >Limetech<i class="fas fa-external-link-alt"></i></a> con un coste de licenciamiento muy bajo (y además perpetuo).  Por suerte para nosotros podemos probar el sistema con la <a class="link"   target="_blank" rel="noopener" href="https://unraid.net/pricing" >licencia gratuita<i class="fas fa-external-link-alt"></i></a> que ofrecen para un mes.</p>
+<p>Cuando arranqué con Unraid venía de un mundo caótico basado en un NAS synology más lento que una tortuga boba y varias raspberry-pis <em>cometarjetas</em> que arruinaban en cualquier momento todo lo que no tuvieras con un backup reciente.</p>
+<p>Antes de explicar qué hardware necesitamos y cómo podemos poner en marcha un servidor con unraid, quiero explicar algunos conceptos que puede que no conozcas y te serán de gran ayuda si finalmente te decides por Unraid como tu SO doméstico.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-2.png"
+                      alt="Unraid dashboard" title="Unraid dashboard"
+                ></p>
+<h1 id="Principios-basicos"><a href="#Principios-basicos" class="headerlink" title="Principios básicos"></a>Principios básicos</h1><h4 id="Host"><a href="#Host" class="headerlink" title="Host"></a>Host</h4><p>Es como se denomina a tu equipo, el servidor que vas a tener en casa montado. En castellano sería “hospedador”.</p>
+<h4 id="Dispositivo-UBS-para-BOOT"><a href="#Dispositivo-UBS-para-BOOT" class="headerlink" title="Dispositivo UBS para BOOT"></a>Dispositivo UBS para BOOT</h4><p>El sistema operativo vive en un USB desde donde arrancaremos el servidor. Este USB solo guarda algunas configuraciones de nuestro sistema, pero debe ser un USB flash de buena calidad. Esto nos permite utilizar los discos duros y SSD para usarlos en nuestros servicios y guardar datos sin necesidad de instalar nada sobre ellos.</p>
+<h4 id="Paridad"><a href="#Paridad" class="headerlink" title="Paridad"></a>Paridad</h4><p>Cuando buscamos tener los datos lo más seguros posibles a prueba de fallos de discos duros, lo ideal es tener los datos redundantes, esto es, en varios sitios “a la vez”. Imaginamos que tenemos. Si tenemos dos discos duros, usamos uno para guardas datos y el otro sería una copia, de forma que, si uno de los dos discos falla, seguimos teniendo el dato asegurado.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-3.png"
+                      alt="sin paridad"
+                ></p>
+<p>Esto con dos discos funciona, pero si tenemos 6 discos, no es muy eficiente usar 3 para duplicar los datos de los otros tres, por lo que utilizamos solo uno de ellos como disco de paridad y el resto sirve para guardar datos.<br>Los datos de los discos se guardan en ceros y unos, y la paridad será el resultado de sumar en binario todos esos bits de datos de cada disco. Ejemplo de un bloque de bits:</p>
+<ul>
+<li>   Disco 1: 1</li>
+<li>   Disco 2: 0</li>
+<li>   Disco 3: 0</li>
+<li>   Paridad = 1 + 0 + 0 = 1</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-4.png"
+                      alt="Paridad"
+                ></p>
+<p>En caso de que uno de los discos falle, es fácil recuperar el dato:</p>
+<ul>
+<li>   Disco 1: 1</li>
+<li>   Disco 2: 0</li>
+<li>   Disco 3: ?</li>
+<li>   Paridad = 1 + 0 + ? = 1 -&gt; ? = 0</li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-5.png"
+                      alt="Cálculo de paridad"
+                ></p>
+<p>Podríamos tener problemas si fallan dos discos de forma simultánea, por lo que podemos añadir un segundo disco de paridad si tenemos un array grande, como con 6 discos, por ejemplo. En mi caso, Al tener un total de 3 discos, solo tengo de un disco de paridad. En caso de que falle un disco, tengo otro físicamente disponible en casa para cambiar cuanto antes el disco fallido y regenerarlo.</p>
+<h4 id="Array-de-discos"><a href="#Array-de-discos" class="headerlink" title="Array de discos"></a>Array de discos</h4><p>Es un sistema RAID en el que la información de los discos duros se almacena de forma redundante. Existen <a class="link"   target="_blank" rel="noopener" href="https://es.wikipedia.org/wiki/RAID" >varios tipos<i class="fas fa-external-link-alt"></i></a>, en este caso es un <a class="link"   target="_blank" rel="noopener" href="https://wiki.unraid.net/UnRAID_6/Overview#Parity-Protected_Array" >sistema propio tipo MAID<i class="fas fa-external-link-alt"></i></a> que se queda a medio camino entre un raid 3 y un raid 4. Por explicarlo de forma sencilla, de todos los discos duros que añadamos, uno de ellos será siempre el de Paridad. Este disco deberá ser igual o superior en tamaño de almacenamiento al disco de mayor capacidad donde guardaremos información. Por ejemplo:</p>
+<ul>
+<li>   Si tenemos un disco de 4TB y dos discos de 3TB, tendremos 6TB de almacenamiento útil siendo el disco de 4TB el dedicado a la paridad.</li>
+<li>   Si tenemos un disco de 3TB y dos discos de 5TB, tendremos 8TB de espacio de almacenamiento útil, siendo uno de los dos discos de 5TB el dedicado a la paridad.</li>
+</ul>
+<p>Una vez creado y puesto en marcha nuestro array, la totalidad del espacio de almacenamiento útil será un único volumen para nosotros, aunque podremos configurar en qué forma queremos que se distribuya la información sobre los discos físicos.</p>
+<h4 id="Disco-cache"><a href="#Disco-cache" class="headerlink" title="Disco cache"></a>Disco cache</h4><p>La cache es una unidad (o varias) de almacenamiento intermedio que pondremos en el sistema. Esta unidad, normalmente un disco SSD de alta velocidad, pero no gran capacidad de almacenamiento es en el que escribiremos los datos inicialmente y donde vivirán nuestros servicios que vayamos poniendo en marcha. Con esto conseguimos recudir drásticamente la cantidad de escrituras y lecturas del array de HDD, aumentando su esperanza de vida en el tiempo.</p>
+<h4 id="Mover"><a href="#Mover" class="headerlink" title="Mover"></a>Mover</h4><p>Es el servicio que se dedica a traspasar de forma periódica los datos que tengamos en la cache y que queramos que vivan en el array. Por ejemplo, si nos descargamos una película o guardamos un documento, inicialmente se almacenará en la cache. Cuando se active el <em>mover</em>, este será traspasado definitivamente al array.<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-7.png"
+                      alt="Ejemplo mover"
+                ></p>
+<h4 id="S-m-a-r-t"><a href="#S-m-a-r-t" class="headerlink" title="S.m.a.r.t."></a>S.m.a.r.t.</h4><p>Es una tecnología que consiste en la capacidad de detección de fallos de discos duros. Este sistema nos permite anticiparnos a la muerte total de un disco duro y cambiarlo antes de que ocurra dicho fallo, de forma que el riesgo de perder datos es menor. Es un sistema que viene preinstalado en Unraid.</p>
+<h4 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h4><p>Es un sistema muy de moda en la informática en el que <a class="link"   target="_blank" rel="noopener" href="https://es.wikipedia.org/wiki/Docker_(software)" >los distintos servicios o programas se ejecutan dentro de un contenedor<i class="fas fa-external-link-alt"></i></a>. La idea es que el desarrollador encapsule dentro de una caja (el contenedor) su aplicación con todas las dependencias necesarias para funcionar, pero sin incluir un sistema operativo completo. Después el usuario pone en marcha el contenedor pasándole los recursos que este necesite, tales como carpetas, puertos, periféricos etc. Es un sistema muy eficiente y que además permite en teoría que cualquier contenedor se pueda ejecutar en cualquier sistema operativo host.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-8.png"
+                      alt="esquema docker"
+                ></p>
+<h4 id="VM-o-maquina-virtual"><a href="#VM-o-maquina-virtual" class="headerlink" title="VM o máquina virtual"></a>VM o máquina virtual</h4><p>Es un ordenador normal y corriente, pero virtualizado dentro de tu host. Unraid nos permite levantar en cosa de minutos ordenadores completos, Linux, Windows etc. Esto nos permite poder levantar VM como servidores virtuales dedicados o tener nuestro ordenador alojado en nuestro servidor y conectarnos a el utilizando una raspberry-pi o un thin-client. Este sistema consume muchos más recursos que un contenedor y además requiere que la CPU del host y tu placa base lo permitan.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-9.png"
+                      alt="esquema VM"
+                ></p>
+<h4 id="Shares"><a href="#Shares" class="headerlink" title="Shares"></a>Shares</h4><p>Como hemos visto, unraid tiene como sistema de archivos la conjunción de un raid con un disco cache. Nosotros como usuarios no accederemos directamente a los discos ni a la cache como lo haríamos en un sistema operativo habitual como Ubuntu o Windows, sino que definiremos una serie de carpetas llamados <em>shares</em> que se distribuirán según su configuración y necesidad por nuestro array y cache.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-10.png"
+                      alt="esquema de shares"
+                ></p>
+<h1 id="Hardware-necesario"><a href="#Hardware-necesario" class="headerlink" title="Hardware necesario"></a>Hardware necesario</h1><p>El equipo básico necesario para empezar es lo que lleva un PC de sobremesa:</p>
+<ul>
+<li>   Placa base</li>
+<li>   Fuente de alimentación</li>
+<li>   CPU</li>
+<li>   Memoria RAM</li>
+<li>   Disco USB para BOOT</li>
+<li>   Disco SSD cache</li>
+<li>   Discos duros para almacenamiento</li>
+</ul>
+<p>Aquí es complicado definir un sistema concreto ya que deberás optar por los elementos que se ajusten a tus necesidades y presupuesto, por lo que lo mejor es que <a class="link"   target="_blank" rel="noopener" href="https://wiki.unraid.net/UnRAID_6/Overview" >te pases por la propia página de Unraid<i class="fas fa-external-link-alt"></i></a> donde dan unas pinceladas de los requisitos mínimos según la cantidad de servicios que vayas a poner en marcha y si vas o no a tener VMs.<br>Si tu presupuesto es ajustado, siempre puedes empezar reutilizando un PC de sobremesa que se haya quedado viejo sin gastar mucho dinero (solo en los discos duros).</p>
+<p>En mi caso, tengo el siguiente build:</p>
+<ul>
+<li>   Placa base: Asus TUF H310-PLUS</li>
+<li>   Fuente de alimentación: Corsair VS450 450W</li>
+<li>   CPU: Intel Pentium Gold G5600 3.9GHz</li>
+<li>   Memoria RAM: Corsair Vengeance LPX 32 GB DDR4, 3000 MHz, CL16 </li>
+<li>   Disco USB para BOOT: Toshiba Hayabusa - USB 2.0 16 GB</li>
+<li>   Disco SSD cache: Samsung MZ-V7S250BW M.2 250Gb</li>
+<li>   Discos duros para almacenamiento: 3x WD NAS Red 3TB SATA3</li>
+<li>   Caja: Corsair Carbide Air 240</li>
+</ul>
+<h1 id="Guia-de-instalacion"><a href="#Guia-de-instalacion" class="headerlink" title="Guía de instalación"></a>Guía de instalación</h1><p>A partir de aquí, teniendo ya nuestro sistema listo y montado os voy a explicar cómo realizar la instalación de unraid y unas configuraciones básicas iniciales.</p>
+<h4 id="Prepara-el-USB"><a href="#Prepara-el-USB" class="headerlink" title="Prepara el USB"></a>Prepara el USB</h4><ul>
+<li>Inserta el USB para BOOT en tu PC</li>
+<li>Formatealo usando el formato FAT (or FAT32)</li>
+<li>Asigna el nombre al USB ‘UNRAID’ (en mayúsculas y sin comillas)</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://unraid.net/download" >Descarga la última versión de la página oficial<i class="fas fa-external-link-alt"></i></a></li>
+<li>Selecciona la versión más reciente de la versión stable, el usb llamado UNRAID y dale a <em>write</em></li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-11.png"
+                      alt="Preparación USB"
+                ></p>
+<h4 id="Prepara-la-BIOS"><a href="#Prepara-la-BIOS" class="headerlink" title="Prepara la BIOS"></a>Prepara la BIOS</h4><ul>
+<li>Conecta el PC a tu red local por cable</li>
+<li>Inserta el USB en el servidor y enciéndelo (siempre en los slots USB del panel trasero del equipo, evita usar los delanteros)</li>
+<li>Durante el arranque deberás pulsar la tecla <em>supr</em> o alguna de las teclas de función, la primera pantalla del encendido te dirá que tecla debes pulsar para entrar a la configuración de la bios</li>
+<li>Debes configurar el USB como disco principal de arranque</li>
+<li>Debes configurar tus puertos SATA en modo HBA Estándar (nunca en modo RAID)</li>
+<li>Si tu placa base lo soporta, habilita la virtualización para poder crear máquinas virtuales en Unraid (Deberás habilitar algo parecido a esto: Intel VT-x / AMD-V)</li>
+<li>Finalmente guarda esta configuración y reinicia el equipo</li>
+</ul>
+<h4 id="Selector-de-modo-BOOT"><a href="#Selector-de-modo-BOOT" class="headerlink" title="Selector de modo BOOT"></a>Selector de modo BOOT</h4><p>Existen varias formas de arrancar el sistema, nosotros lo vamos a hacer en modo Unraid OS (Headless), de forma que no vamos a conectar nada (ni pantalla ni teclado y ratón). Esperamos a que arranque en este modo ya que es el de por defecto y cuando veamos que en nuestro router aparece un nuevo equipo llamado tower, accedemos al siguiente enlace desde nuestro navegador:<br><a class="link"   target="_blank" rel="noopener" href="http://tower/" >http://tower<i class="fas fa-external-link-alt"></i></a> (o <a class="link"   target="_blank" rel="noopener" href="http://tower.local/" >http://tower.local<i class="fas fa-external-link-alt"></i></a> en mac)<br>Si no conseguimos acceder prueba a entrar directamente con la IP que aparezca en el router, tipo: <a class="link"   target="_blank" rel="noopener" href="http://192.168.1.30/" >http://192.168.1.30<i class="fas fa-external-link-alt"></i></a><br>(username = root, sin contraseña)</p>
+<h4 id="Registra-el-sistema"><a href="#Registra-el-sistema" class="headerlink" title="Registra el sistema"></a>Registra el sistema</h4><p>Una vez arrancados nos llevará a la página de registro, donde tendremos que registrarlo bien con la licencia gratuita de un mes o cualquiera de las licencias de pago. (Al final de este proceso, la <em>key</em> se guardará en la carpeta <em>config</em> del USB, por lo que, si el registro es de una licencia de pago, conviene que hagas una copia de este archivo en otro lugar, como tu pc personal)</p>
+<h4 id="Asignando-los-discos-al-array-y-cache"><a href="#Asignando-los-discos-al-array-y-cache" class="headerlink" title="Asignando los discos al array y cache"></a>Asignando los discos al array y cache</h4><p>Después de registrar el sistema, estamos listos para comenzar a asignar dispositivos para que los administre Unraid. Haz clic en la pestaña <em>Main</em> de Unraid y sigue estas pautas al asignar discos:</p>
+<ul>
+<li>Elige siempre el disco duro con mayor capacidad disponible para que actúe como dispositivo(s) de paridad. Si en futuro quieres ampliar tu array, estos nuevos discos nunca podrán ser más grande que el disco de paridad. Siempre podrás crear un disco nuevo de paridad más grande en el futuro, pero es mejor empezar ya con un disco grande.</li>
+<li>Asigna tu disco o discos SSD al array de cache. Ten en cuenta que si solo dispones de un disco cache, durante el tiempo en el que el dato está en cache y no ha sido movido al array de discos duros, no estará protegido frente a un fallo y hay un potencial peligro de pérdida de datos. </li>
+</ul>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-12.png"
+                      alt="asignacion de discos"
+                ></p>
+<h4 id="Iniciando-el-array-y-formateo-de-discos"><a href="#Iniciando-el-array-y-formateo-de-discos" class="headerlink" title="Iniciando el array y formateo de discos"></a>Iniciando el array y formateo de discos</h4><p>Una vez que tengas todos sus discos asignados, haz clic en el botón <em>Start</em> en la zona de <em>Array Operation</em>. Esto montará sus discos e iniciará la matriz. Los nuevos discos agregados a aparecerán como <em>Unformatted</em> y no los podrás usar todavía para almacenar archivos hasta que los formatees. Para formatear tus discos, haz clic en la casilla de <em>Format</em>, aparecerá un mesage de advertencia y la das de nuevo a <em>Format</em>.  Una vez formateados los discos, se hará la primera sincronización de paridad. Hasta que finalice esta sincronización, no tendremos aún redundancia de datos por lo que debemos esperar un rato a que finalice para poder empezar a guardad datos en el servidor. </p>
+<h1 id="Primeros-pasos"><a href="#Primeros-pasos" class="headerlink" title="Primeros pasos"></a>Primeros pasos</h1><p>Lo primero que vamos a hacer en nuestro sistema es habilitar una contraseña para el usuario. Para ello vamos a <em>users</em>, elegimos root y escribimos una contraseña. </p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-13.png"
+                      alt="root_password"
+                ></p>
+<p>El segundo paso será configurar los sistemas periódicos (mover y parity check). Para ello vamos a <em>settings</em> y <em>scheduler</em>. Aquí la configuración será la que más te guste, pero para empezar vamos a poner un parity check mensual y el mover diario.</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-14.png"
+                      alt="scheduler"
+                ></p>
+<p>Finalmente vamos a activar Docker, para ello vamos <em>settings</em> -&gt; <em>Docker</em> y vamos a decir que <em>Enable Docker</em> -&gt; <em>yes</em></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/pasted-15.png"
+                      alt="Enable docker"
+                ></p>
+<p>El último paso de esta guía será instalar el plugin de aplicaciones, que es de donde podremos configurar de forma sencilla los distintos servicios que queramos activar. Para ello vamos a <em>plugins</em> -&gt; <em>install plugin</em>, metemos esta url:</p>
+<p><code>https://raw.githubusercontent.com/Squidly271/community.applications/master/plugins/community.applications.plg</code></p>
+<p>y le damos a install:</p>
+<p>![Plugin install](/images/pasted-16.png</p>
+<h3 id="Estamos-listos"><a href="#Estamos-listos" class="headerlink" title="Estamos listos"></a>Estamos listos</h3><p>A partir de aquí estaremos listos para empezar a poner en marcha todo lo que queramos. En próximos posts explicaré algunas configuraciones más avanzadas, plugins básicos más recomendados y también iré explicando los distintos servicios que tengo yo en marcha.</p>
+<p>Salu2  </p>
+<hr>
+<p><em>Si quieres recibir notificaciones cuando haya nuevas publicaciones, <a href="https://blog.yayitazale.duckdns.org/Subscribe/">suscríbete  aquí</a></em></p>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/01/29/hello-world/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">IT&#39;S ALIVE.</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script 
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script >
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '2baf5c63d48c7140e7ad',
+                    clientSecret: '9f719f7b7ee5e3657a7f43d73a780908d06b2bd6',
+                    repo: 'hexo_comments',
+                    owner: 'yayitazale',
+                    admin: ['yayitazale'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('false') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2021</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Joseba Egia</a>
+        </div>
+        
+            <script async  src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Principios-basicos"><span class="nav-text">Principios básicos</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Host"><span class="nav-text">Host</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dispositivo-UBS-para-BOOT"><span class="nav-text">Dispositivo UBS para BOOT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Paridad"><span class="nav-text">Paridad</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Array-de-discos"><span class="nav-text">Array de discos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Disco-cache"><span class="nav-text">Disco cache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mover"><span class="nav-text">Mover</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#S-m-a-r-t"><span class="nav-text">S.m.a.r.t.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker"><span class="nav-text">Docker</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VM-o-maquina-virtual"><span class="nav-text">VM o máquina virtual</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Shares"><span class="nav-text">Shares</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Hardware-necesario"><span class="nav-text">Hardware necesario</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Guia-de-instalacion"><span class="nav-text">Guía de instalación</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Prepara-el-USB"><span class="nav-text">Prepara el USB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prepara-la-BIOS"><span class="nav-text">Prepara la BIOS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Selector-de-modo-BOOT"><span class="nav-text">Selector de modo BOOT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Registra-el-sistema"><span class="nav-text">Registra el sistema</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Asignando-los-discos-al-array-y-cache"><span class="nav-text">Asignando los discos al array y cache</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Iniciando-el-array-y-formateo-de-discos"><span class="nav-text">Iniciando el array y formateo de discos</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Primeros-pasos"><span class="nav-text">Primeros pasos</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Estamos-listos"><span class="nav-text">Estamos listos</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/local-search.js"></script>
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/left-side-toggle.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/js/toc.js"></script>
+    
+</div>
+
+
+
+</body>
+</html>
